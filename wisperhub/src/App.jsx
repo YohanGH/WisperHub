@@ -2,7 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import MessageComposer from "./components/MessageComposer/MessageComposer";
 
-import Conversation from "./conponents/conversation/Conversation"
+import Conversation from "./components/conversation/conversation";
 
 function App() {
   const [sendMessage, setSendMessage] = useState(undefined);
