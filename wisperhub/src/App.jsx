@@ -1,16 +1,18 @@
-import { useState } from 'react'
-import './App.css'
+import "./App.css";
+import { useState } from "react";
+import MessageComposer from "./components/MessageComposer/MessageComposer";
 
 import Conversation from "./conponents/conversation/Conversation"
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [sendMessage, setSendMessage] = useState(undefined);
+  console.log(sendMessage);
   return (
     <>
-	  <Conversation />
+      <Conversation />
+      <MessageComposer setSendMessage={setSendMessage} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
