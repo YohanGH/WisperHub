@@ -1,10 +1,13 @@
 import "./App.css";
-import InputMessage from "./components/InputMessage";
+import { useState } from "react";
+import MessageComposer from "./components/MessageComposer/MessageComposer";
 
 function App() {
+  const [sendMessage, setSendMessage] = useState(undefined);
+  console.log(sendMessage);
   return (
     <>
-      <InputMessage />
+      <MessageComposer setSendMessage={setSendMessage} />
     </>
   );
 }

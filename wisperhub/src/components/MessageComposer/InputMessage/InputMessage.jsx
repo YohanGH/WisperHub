@@ -1,8 +1,9 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
-function InputMessage() {
+export default InputMessage;
+function InputMessage({ setSendMessage }) {
   const [messageText, setMessageText] = useState("");
-  const [sendMessage, setSendMessage] = useState(undefined);
 
   const handleInputChange = (event) => {
     setMessageText(event.target.value);
@@ -11,13 +12,11 @@ function InputMessage() {
     if (event.key === "Enter") {
       setSendMessage(event.target.value);
       setMessageText("");
-      console.log(event.target.value);
     }
   };
   const handleSend = () => {
     setSendMessage(messageText);
     setMessageText("");
-    console.log(messageText);
   };
 
   return (
@@ -35,4 +34,6 @@ function InputMessage() {
   );
 }
 
-export default InputMessage;
+InputMessage.propTypes = {
+  setSendMessage: PropTypes.func.isRequired,
+};
