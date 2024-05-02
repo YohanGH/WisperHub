@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import MessageComposer from "./components/MessageComposer/MessageComposer";
+import MessageComposer from "./components/message_composer/MessageComposer";
 
 import Conversation from "./components/conversation/conversation";
 
