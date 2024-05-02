@@ -1,13 +1,12 @@
-import { useState } from 'react'
-import './App.css'
+import "./App.css";
+import InputMessage from "./components/InputMessage";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
+      <InputMessage />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
