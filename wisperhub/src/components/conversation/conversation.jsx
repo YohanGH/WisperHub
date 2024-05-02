@@ -7,15 +7,13 @@ import styles from "./conversation-style.module.css";
  * */
 
 export default function Conversation({ users, messages }) {
-	return (
-		<div className={styles.container-conversation}>
-			<div className={styles.display-information}>
-				<User />
-				<Date />
-			</div>
-			<div className={styles.display-message}>
-				<Message />
-			</div>
-		</div>
-	);
+  return (
+    <div className={styles.containerConversation}>
+      <div className={styles.displayInformation}>
+        {/* <User />
+        <Date /> */}
+      </div>
+      <div className={styles.displayMessage}>{/* <Message /> */}</div>
+    </div>
+  );
 }

@@ -1,4 +1,4 @@
-import InputMessage from "./InputMessage/InputMessage";
+import InputMessage from "./input_message/InputMessage";
 import PropTypes from "prop-types";
 
 export default function MessageComposer({ setSendMessage }) {
