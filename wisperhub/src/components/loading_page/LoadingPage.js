@@ -24,6 +24,7 @@ export default function LoadingPage() {
 	return (
 		<div>
 			<motion.div
+				id="loadingPage"
 				className="loading-page"
 				animate={{
 					scale: [1, 2, 2, 1, 1],
@@ -40,7 +41,7 @@ export default function LoadingPage() {
 			>
 				<svg viewBox="2 8 16 24" width="16" height="24"></svg>
 			</motion.div>
-			<h2>Loading...</h2>
+			<h2 id="loadingTitle">Loading...</h2>
 			<ProgressBar progress={progress.get()} />
 		</div>
 	);
