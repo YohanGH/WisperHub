@@ -1,4 +1,5 @@
-import InputMessage from "./input_message/InputMessage";
+import React from "react";
+import InputMessage from "./input_message/InputMessage.js";
 import PropTypes from "prop-types";
 
 export default function MessageComposer({ setSendMessage }) {
