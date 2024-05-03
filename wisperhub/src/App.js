@@ -1,17 +1,27 @@
 import React from "react";
 import "./App.css";
-import { useState } from "react";
-import MessageComposer from "./components/message_composer/MessageComposer.js";
-import Conversation from "./components/conversation/conversation.js";
+import { useState, useEffect } from "react";
+import LoadingPage from "./components/loading_page/LoadingPage.js"
+import MainApp from "./components/MainApp.js";
 
 function App() {
-  const [sendMessage, setSendMessage] = useState(undefined);
-  console.log(sendMessage);
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 5555);
+    return () => clearTimeout(timer)
+  }, []);
+
   return (
     <>
-      <Conversation />
-      <MessageComposer setSendMessage={setSendMessage} />
-    </>
+    {isLoading ? (
+      <LoadingPage />
+    ) : (
+      <MainApp />
+    )}
+  </>
   );
 }
 

@@ -13,6 +13,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "framer-motion": "^11.1.7",
     "concurrently": "^8.2.2",
     "cors": "^2.8.5",
     "express": "^4.19.2",

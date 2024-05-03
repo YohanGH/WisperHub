@@ -1,0 +1,13 @@
+.progress-bar {
+    width: 60%;
+    background-color: #eee;
+	position: absolute;
+    left: 20%;
+	top: 75%;
+}
+
+.progress-bar > div {
+    height: 10px;
+    background-color: blueviolet;
+    transition: width 0.5s;
+}
