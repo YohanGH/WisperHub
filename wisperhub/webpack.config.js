@@ -1,7 +1,6 @@
 import path from "path";
 import { fileURLToPath } from "url";
 
-// Obtenir le chemin du répertoire actuel en utilisant import.meta.url
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const mode =
