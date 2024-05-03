@@ -1,4 +1,5 @@
-import styles from "./conversation-style.module.css";
+import React from "react";
+import styles from "./conversation-style.css";
 
 /**
  * Components Conversation affiche les messages heures et nom de l'utilisateur
@@ -8,12 +9,12 @@ import styles from "./conversation-style.module.css";
 
 export default function Conversation({ users, messages }) {
   return (
-    <div className={styles.containerConversation}>
-      <div className={styles.displayInformation}>
+    <div className="containerConversation">
+      <div className="displayInformation">
         {/* <User />
         <Date /> */}
       </div>
-      <div className={styles.displayMessage}>{/* <Message /> */}</div>
+      <div className="displayMessage">{/* <Message /> */}</div>
     </div>
   );
 }
