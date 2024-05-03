@@ -1,7 +1,7 @@
-import "./loadingPage-styles.css";
+import "./loading-page-styles.css";
 import React, { useEffect } from "react";
 import { motion, useTime, useMotionValue } from "framer-motion";
-import ProgressBar from "../progress-bar/ProgressBar";
+import ProgressBar from "../progress_bar/ProgressBar.js";
 
 export default function LoadingPage() {
 	const progress = useMotionValue(0);
