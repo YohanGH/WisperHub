@@ -1,25 +1,24 @@
 import "./loading-page-styles.css";
-import React, { useEffect } from "react";
-import { motion, useTime, useMotionValue } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import ProgressBar from "../progress_bar/ProgressBar.js";
 
 export default function LoadingPage() {
-	const progress = useMotionValue(0);
-	const time = useTime();
+	const [progress, setProgress] = useState(0);
 
-	useEffect(() => {
-		const unsubscribe = time.onChange((latest) => {
-			const newProgress = (latest / 5000) * 100;
-			if (newProgress >= 100) {
-				progress.stop();
-				progress.set(100);
-			} else {
-				progress.set(newProgress);
-			}
-		});
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setProgress((prevProgress) => {
+                if (prevProgress >= 100) {
+                    clearInterval(interval);
+                    return 100;
+                }
+                return prevProgress + 1;
+            });
+        }, 50);
 
-		return () => unsubscribe();
-	}, [time, progress]);
+        return () => clearInterval(interval);
+    }, []);
 
 	return (
 		<div>
@@ -42,7 +41,7 @@ export default function LoadingPage() {
 				<svg viewBox="2 8 16 24" width="16" height="24"></svg>
 			</motion.div>
 			<h2 id="loadingTitle">Loading...</h2>
-			<ProgressBar progress={progress.get()} />
+			<ProgressBar progress={progress} />
 		</div>
 	);
 }
