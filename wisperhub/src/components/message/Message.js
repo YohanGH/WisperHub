@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import { send } from "vite";
 
 /**
  * Components pour afficher le message dans le rendu visuel
