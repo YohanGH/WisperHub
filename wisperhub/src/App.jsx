@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import MessageComposer from "./components/message_composer/MessageComposer";
-
+import LoadingPage from "./components/loading-page/LoadingPage"
 import Conversation from "./components/conversation/conversation";
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
   console.log(sendMessage);
   return (
     <>
+	  <LoadingPage />
       <Conversation />
       <MessageComposer setSendMessage={setSendMessage} />
     </>
