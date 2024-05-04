@@ -1,23 +1,37 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-export default InputMessage;
-function InputMessage({ setSendMessage }) {
+export default function InputMessage({ setSendMessage }) {
   const [messageText, setMessageText] = useState("");
+  const user = "liladoc";
 
   const handleInputChange = (event) => {
     setMessageText(event.target.value);
   };
+
   const handleInputKeyDown = (event) => {
     if (event.key === "Enter") {
-      setSendMessage(event.target.value);
+      setSendMessage((prevMessages) => [
+        ...prevMessages,
+        {
+          id: prevMessages.length,
+          user: user,
+          message: messageText,
+        },
+      ]);
       setMessageText("");
     }
   };
+
   const handleSend = () => {
-    setSendMessage(messageText);
+    setSendMessage((prevMessages) => [
+      ...prevMessages,
+      {
+        id: prevMessages.length,
+        user: user,
+        message: messageText,
+      },
+    ]);
     setMessageText("");
   };
 
