@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 /**
  * Components pour afficher le message dans le rendu visuel
- * @param {string} props.sendMessage - Le text à afficher.
+ * @param {Array} props.sendMessage - Le text à afficher.
  * */
 
 export default function Message({ sendMessage }) {
