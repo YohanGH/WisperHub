@@ -101,6 +101,10 @@ export default function Emoji({
     "🍉",
     "💛",
     "💚",
+    "🖕",
+    "🍪",
+    "🍕",
+    "💻",
   ];
 
   const handleEmoji = () => {
