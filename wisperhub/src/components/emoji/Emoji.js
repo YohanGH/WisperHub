@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import styles from "./Emoji-style.css";
+import PropTypes from "prop-types";
 
-export default function Emoji({ messageText, setMessageText }) {
+export default function Emoji({
+  messageText,
+  setMessageText,
+  toogleEmoji,
+  setToogleEmoji,
+}) {
+
   const emoji = [
     "🙂​",
     "😂",
@@ -95,8 +102,11 @@ export default function Emoji({ messageText, setMessageText }) {
     "🍉",
     "💛",
     "💚",
+    "🖕",
+    "🍪",
+    "🍕",
+    "💻",
   ];
-  const [toogleEmoji, setToogleEmoji] = useState(false);
 
   const handleEmoji = () => {
     setToogleEmoji(!toogleEmoji);
@@ -126,3 +136,11 @@ export default function Emoji({ messageText, setMessageText }) {
     </div>
   );
 }
+
+Emoji.propTypes = {
+  setMessageText: PropTypes.func.isRequired,
+  setToogleEmoji: PropTypes.func.isRequired,
+  toogleEmoji: PropTypes.bool.isRequired,
+  messageText: PropTypes.string.isRequired,
+};
+
