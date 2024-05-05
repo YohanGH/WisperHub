@@ -1,0 +1,23 @@
+.containerEmoji {
+  display: flex;
+  flex-wrap: wrap;
+  width: 210px;
+  min-height: 500px;
+  gap: 5px;
+  border: solid 1px black;
+  border-radius: 15px;
+}
+.none {
+  display: none;
+}
+
+.emote {
+  border: none;
+  background-color: transparent;
+  height: 10px;
+  font-size: 1.3rem;
+}
+.buttonEmoteMenu {
+  background-color: transparent;
+  font-size: 1.3rem;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import Emoji from "../../emoji/Emoji.js";
 
 export default function InputMessage({ setSendMessage }) {
   const [messageText, setMessageText] = useState("");
@@ -46,6 +47,7 @@ export default function InputMessage({ setSendMessage }) {
       <button type="button" onClick={handleSend}>
         send
       </button>
+      <Emoji messageText={messageText} setMessageText={setMessageText} />
     </>
   );
 }
