@@ -4,6 +4,7 @@ import Emoji from "../../emoji/Emoji.js";
 
 export default function InputMessage({ setSendMessage }) {
   const [messageText, setMessageText] = useState("");
+  const [toogleEmoji, setToogleEmoji] = useState(false);
   const user = "liladoc";
 
   const handleInputChange = (event) => {
@@ -21,6 +22,7 @@ export default function InputMessage({ setSendMessage }) {
         },
       ]);
       setMessageText("");
+      setToogleEmoji(false);
     }
   };
 
@@ -34,6 +36,7 @@ export default function InputMessage({ setSendMessage }) {
       },
     ]);
     setMessageText("");
+    setToogleEmoji(false);
   };
 
   return (
@@ -47,7 +50,12 @@ export default function InputMessage({ setSendMessage }) {
       <button type="button" onClick={handleSend}>
         send
       </button>
-      <Emoji messageText={messageText} setMessageText={setMessageText} />
+      <Emoji
+        messageText={messageText}
+        setMessageText={setMessageText}
+        setToogleEmoji={setToogleEmoji}
+        toogleEmoji={toogleEmoji}
+      />
     </>
   );
 }
