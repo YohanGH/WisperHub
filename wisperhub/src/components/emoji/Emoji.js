@@ -106,7 +106,6 @@ export default function Emoji({ messageText, setMessageText }) {
     setMessageText(`${messageText}${emote}`);
   }
 
-  console.log(toogleEmoji);
   return (
     <div>
       <button className="buttonEmoteMenu" type="button" onClick={handleEmoji}>
