@@ -8,6 +8,7 @@ export default function Emoji({
   toogleEmoji,
   setToogleEmoji,
 }) {
+
   const emoji = [
     "🙂​",
     "😂",
@@ -135,9 +136,11 @@ export default function Emoji({
     </div>
   );
 }
+
 Emoji.propTypes = {
   setMessageText: PropTypes.func.isRequired,
   setToogleEmoji: PropTypes.func.isRequired,
   toogleEmoji: PropTypes.bool.isRequired,
   messageText: PropTypes.string.isRequired,
 };
+

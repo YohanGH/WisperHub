@@ -50,12 +50,14 @@ export default function InputMessage({ setSendMessage }) {
       <button type="button" onClick={handleSend}>
         send
       </button>
+
       <Emoji
         messageText={messageText}
         setMessageText={setMessageText}
         setToogleEmoji={setToogleEmoji}
         toogleEmoji={toogleEmoji}
       />
+
     </>
   );
 }
