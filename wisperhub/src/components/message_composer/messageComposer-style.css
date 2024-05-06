@@ -1,0 +1,9 @@
+#messageComposer {
+  display: flex;
+  justify-content: center;
+  width: 75vw;
+}
+
+.messageInput {
+  width: 57vw;
+}
