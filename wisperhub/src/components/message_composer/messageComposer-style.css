@@ -2,8 +2,22 @@
   display: flex;
   justify-content: center;
   width: 75vw;
+  background-color: #383a40;
+  border-radius: 15px;
 }
 
 .messageInput {
   width: 57vw;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.sendButton {
+  background-color: transparent;
+  border-right: solid black;
+  border-left: solid black;
+  border-top: none;
+  border-bottom: none;
+  color: white;
 }

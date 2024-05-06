@@ -20,4 +20,7 @@
 .buttonEmoteMenu {
   background-color: transparent;
   font-size: 1.3rem;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: none;
 }

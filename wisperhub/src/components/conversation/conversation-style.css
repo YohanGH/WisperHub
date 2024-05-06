@@ -1,9 +1,10 @@
 .containerConversation {
-  height: 500px;
+  height: 85vh;
   overflow-y: auto;
   scrollbar-width: thin;
   display: flex;
   flex-direction: column-reverse;
+  padding-top: 2vh;
 }
 
 ::-webkit-scrollbar {

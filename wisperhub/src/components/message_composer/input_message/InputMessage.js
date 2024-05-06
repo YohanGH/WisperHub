@@ -50,7 +50,7 @@ export default function InputMessage({ setSendMessage }) {
         onChange={handleInputChange}
         onKeyDown={handleInputKeyDown}
       />
-      <button type="button" onClick={handleSend}>
+      <button className="sendButton" type="button" onClick={handleSend}>
         send
       </button>
 
