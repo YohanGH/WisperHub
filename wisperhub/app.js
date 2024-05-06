@@ -12,6 +12,7 @@ app.get("/*", (req, res) => {
   res.sendFile(path.join(new URL(".", import.meta.url).pathname, "index.html"));
 });
 
-app.listen(8080, () => {
-  console.log("App running on http://localhost:8080");
+
+app.listen(() => {
+  console.log("TouTaFait");
 });
