@@ -12,6 +12,7 @@ app.get("/*", (req, res) => {
   res.sendFile(path.join(new URL(".", import.meta.url).pathname, "index.html"));
 });
 
+
 app.listen(() => {
   console.log("TouTaFait");
 });
