@@ -6,6 +6,9 @@
   gap: 5px;
   border: solid 1px black;
   border-radius: 15px;
+  position: absolute;
+  bottom: 5vh;
+  right: 13vw;
 }
 .none {
   display: none;
