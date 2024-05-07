@@ -12,19 +12,12 @@ export default function InputMessage({ setSendMessage, sendMessage }) {
   useEffect(() => {
     socketRef.current = io("http://localhost:8080");
 
-    socketRef.current.on("connect", () => {
-      console.log(
-        "Successfully connected to server:",
-        socketRef.current.connected
-      );
-    });
-
     socketRef.current.on("connect_error", (err) => {
       console.error("Connection error:", err);
     });
 
     socketRef.current.on("chat message", (msg) => {
-      console.log("message: " + msg);
+      setSendMessage((prevMessages) => [...prevMessages, msg]);
     });
 
     return () => {
@@ -55,7 +48,12 @@ export default function InputMessage({ setSendMessage, sendMessage }) {
         message: messageText,
       },
     ]);
-    socketRef.current.emit("chat message", messageText);
+
+    socketRef.current.emit("chat message", {
+      id: sendMessage.length,
+      user: user,
+      message: messageText,
+    });
     setMessageText("");
     setToggleEmoji(false);
   };
@@ -85,5 +83,5 @@ export default function InputMessage({ setSendMessage, sendMessage }) {
 
 InputMessage.propTypes = {
   setSendMessage: PropTypes.func.isRequired,
-  sendMessage: PropTypes.func.isRequired,
+  sendMessage: PropTypes.array.isRequired,
 };

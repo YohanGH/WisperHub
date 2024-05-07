@@ -5,10 +5,9 @@ import PropTypes from "prop-types";
 export default function Emoji({
   messageText,
   setMessageText,
-  toogleEmoji,
-  setToogleEmoji,
+  toggleEmoji,
+  setToggleEmoji,
 }) {
-
   const emoji = [
     "🙂​",
     "😂",
@@ -109,7 +108,7 @@ export default function Emoji({
   ];
 
   const handleEmoji = () => {
-    setToogleEmoji(!toogleEmoji);
+    setToggleEmoji(!toggleEmoji);
   };
 
   function handleEmote(emote) {
@@ -121,7 +120,7 @@ export default function Emoji({
       <button className="buttonEmoteMenu" type="button" onClick={handleEmoji}>
         🙂​
       </button>
-      <div className={toogleEmoji === true ? "containerEmoji" : "none"}>
+      <div className={toggleEmoji === true ? "containerEmoji" : "none"}>
         {emoji.map((emote) => (
           <button
             className="emote"
@@ -139,8 +138,7 @@ export default function Emoji({
 
 Emoji.propTypes = {
   setMessageText: PropTypes.func.isRequired,
-  setToogleEmoji: PropTypes.func.isRequired,
-  toogleEmoji: PropTypes.bool.isRequired,
+  setToggleEmoji: PropTypes.func.isRequired,
+  toggleEmoji: PropTypes.bool.isRequired,
   messageText: PropTypes.string.isRequired,
 };
-
