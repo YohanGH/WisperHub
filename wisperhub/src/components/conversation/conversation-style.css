@@ -1,0 +1,9 @@
+.containerConversation {
+  height: 85vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: black #383a40;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 2vh;
+}
