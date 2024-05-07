@@ -11,7 +11,8 @@
     "build-dev": "webpack --watch",
     "server": "nodemon app.js",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "concurrently": "^8.2.2",
@@ -23,6 +24,8 @@
     "react-hook-form": "^7.51.4",
     "react-router-dom": "^6.23.0",
     "react-toastify": "^10.0.5",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5",
     "webpack-node-externals": "^3.0.0"
   },
   "devDependencies": {
