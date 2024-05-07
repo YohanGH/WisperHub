@@ -1,1 +1,14 @@
+#chat {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 75vw;
+  padding-left: 12.5vw;
+  padding-right: 12.5vw;
+  color: white;
+}
 
+body {
+  background-color: #252526;
+  color: white;
+}
