@@ -9,7 +9,10 @@ export default function MainApp() {
   return (
     <div id="chat">
       <Conversation sendMessage={sendMessage} />
-      <MessageComposer setSendMessage={setSendMessage} />
+      <MessageComposer
+        setSendMessage={setSendMessage}
+        sendMessage={sendMessage}
+      />
     </div>
   );
 }
