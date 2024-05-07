@@ -8,7 +8,6 @@
 }
 
 .form-input,
-.form-radio-input,
 .button-submit {
     width: 100%;
     padding: 8px;
@@ -16,7 +15,6 @@
 }
 
 .form-input:hover,
-.form-radio-input:hover,
 .button-submit:hover {
     border: 1px solid #ec5990;
 }
