@@ -3,10 +3,9 @@ import PropTypes from "prop-types";
 import Emoji from "../../emoji/Emoji.js";
 import io from "socket.io-client";
 
-export default function InputMessage({ setSendMessage, sendMessage }) {
+export default function InputMessage({ setSendMessage, sendMessage, user }) {
   const [messageText, setMessageText] = useState("");
   const [toggleEmoji, setToggleEmoji] = useState(false);
-  const user = "liladoc";
   const socketRef = useRef(null);
 
   useEffect(() => {
@@ -84,4 +83,5 @@ export default function InputMessage({ setSendMessage, sendMessage }) {
 InputMessage.propTypes = {
   setSendMessage: PropTypes.func.isRequired,
   sendMessage: PropTypes.array.isRequired,
+  user: PropTypes.string.isRequired,
 };

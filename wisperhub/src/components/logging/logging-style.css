@@ -1,0 +1,25 @@
+.logging {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.loggingInput {
+  font-size: 2rem;
+  border-radius: 15px;
+  background-color: #383a40;
+  color: white;
+  width: 55vw;
+  text-align: center;
+  min-width: 324px;
+  border: none;
+}
+.joinButton {
+  background-color: #383a40;
+  color: white;
+  border-radius: 14px;
+  font-size: 2rem;
+  border: none;
+}
