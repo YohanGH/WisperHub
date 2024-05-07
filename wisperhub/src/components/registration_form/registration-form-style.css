@@ -33,11 +33,6 @@
     background-color: #bf1650;
 }
 
-@media (max-width: 600px) {
-    .registration-form-container {
-    }
-}
-
 .form-input {
     display: block;
     box-sizing: border-box;
