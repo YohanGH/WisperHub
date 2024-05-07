@@ -12,7 +12,7 @@ export default function InputMessage({ setSendMessage }) {
   };
 
   const handleInputKeyDown = (event) => {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" && messageText !== "") {
       setSendMessage((prevMessages) => [
         ...prevMessages,
         {
@@ -27,27 +27,30 @@ export default function InputMessage({ setSendMessage }) {
   };
 
   const handleSend = () => {
-    setSendMessage((prevMessages) => [
-      ...prevMessages,
-      {
-        id: prevMessages.length,
-        user: user,
-        message: messageText,
-      },
-    ]);
-    setMessageText("");
-    setToogleEmoji(false);
+    if (messageText !== "") {
+      setSendMessage((prevMessages) => [
+        ...prevMessages,
+        {
+          id: prevMessages.length,
+          user: user,
+          message: messageText,
+        },
+      ]);
+      setMessageText("");
+      setToogleEmoji(false);
+    }
   };
 
   return (
     <>
       <input
+        className="messageInput"
         type="text"
         value={messageText}
         onChange={handleInputChange}
         onKeyDown={handleInputKeyDown}
       />
-      <button type="button" onClick={handleSend}>
+      <button className="sendButton" type="button" onClick={handleSend}>
         send
       </button>
 
@@ -57,7 +60,6 @@ export default function InputMessage({ setSendMessage }) {
         setToogleEmoji={setToogleEmoji}
         toogleEmoji={toogleEmoji}
       />
-
     </>
   );
 }
