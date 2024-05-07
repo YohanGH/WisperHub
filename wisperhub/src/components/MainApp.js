@@ -7,7 +7,7 @@ export default function MainApp() {
   const [sendMessage, setSendMessage] = useState([]);
 
   return (
-    <div>
+    <div id="chat">
       <Conversation sendMessage={sendMessage} />
       <MessageComposer setSendMessage={setSendMessage} />
     </div>
