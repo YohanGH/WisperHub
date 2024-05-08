@@ -6,6 +6,9 @@
   padding-left: 10vw;
   padding-right: 10vw;
   color: white;
+  box-sizing: content-box;
+  height: 95vh;
+  justify-content: flex-end;
 }
 
 body {

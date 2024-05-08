@@ -14,15 +14,20 @@
   color: white;
   padding: 10px 0px 10px 10px;
   font-size: 1.3rem;
+  resize: none;
+  overflow-y: hidden;
+  white-space: pre-wrap;
 }
 
 .sendButton {
   background-color: transparent;
-  border-right: solid black;
-  border-left: solid black;
-  border-top: none;
+  border: none;
   border-bottom: none;
   color: white;
   cursor: pointer;
   font-size: 1rem;
+}
+
+.sendPic {
+  height: 40px;
 }

@@ -9,7 +9,10 @@
 }
 .messageUser {
   font-size: 1.4rem;
+  padding-left: 5px;
 }
 .messageText {
   font-size: 1.3rem;
+  word-break: break-word;
+  padding: 0px 5px;
 }
