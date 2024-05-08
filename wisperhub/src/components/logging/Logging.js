@@ -27,5 +27,5 @@ export default function Logging({ setUser }) {
 }
 
 Logging.propTypes = {
-  user: PropTypes.string.isRequired,
+  setUser: PropTypes.func.isRequired,
 };
