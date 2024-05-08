@@ -24,7 +24,7 @@ export default function MainApp() {
       ) : (
         <div>
           <Logging setUser={setUser} />
-          <CGU setCguAccepted={(setCguAccepted, cguAccepted)} />
+          <CGU setCguAccepted={setCguAccepted} />
         </div>
       )}
     </>

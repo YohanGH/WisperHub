@@ -8,9 +8,8 @@ import "./cgu-style.css";
  * @returns
  */
 
-export default function CGU({ setCguAccepted, cguAccepted }) {
+export default function CGU({ setCguAccepted }) {
   const validateCGU = (isAccepted) => () => {
-    console.log(setCguAccepted);
     setCguAccepted(isAccepted);
   };
 
