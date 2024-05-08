@@ -18,7 +18,9 @@
   overflow-y: hidden;
   white-space: pre-wrap;
 }
-
+.messageInput:focus {
+  outline: none;
+}
 .sendButton {
   background-color: transparent;
   border: none;
