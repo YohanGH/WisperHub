@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Dates from "../dates/Dates.js"
+import Dates from "../dates/Dates.js";
 /**
  * Components pour afficher le message dans le rendu visuel
  * @param {Array} props.sendMessage - Le text à afficher.
@@ -12,11 +12,13 @@ export default function Message({ sendMessage }) {
       {sendMessage.map((messages) => (
         <div key={messages.id}>
           <section className="informationMessage">
-           <strong>{messages.user}</strong>
+            <span className="messageUser">
+              <strong>{messages.user}</strong>
+            </span>
             <span> ~ </span>
-            <Dates /> 
+            <Dates />
           </section>
-          <p>{messages.message}</p>
+          <p className="messageText">{messages.message}</p>
         </div>
       ))}
     </>
