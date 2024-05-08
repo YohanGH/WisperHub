@@ -7,3 +7,9 @@
   flex-direction: column-reverse;
   padding-top: 2vh;
 }
+.messageUser {
+  font-size: 1.4rem;
+}
+.messageText {
+  font-size: 1.3rem;
+}
