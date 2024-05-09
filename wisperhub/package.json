@@ -2,11 +2,7 @@
   "name": "wisperhub",
   "homepage": ".",
   "private": true,
-<<<<<<< HEAD
-  "version": "0.0.0",
-=======
   "version": "1.0.0",
->>>>>>> 046ca72901db62e2be2550c40410f7491ffbd3b4
   "description": "This project aims to create a real-time communication application similar to Discord, utilizing React for dynamic interfaces and WebSockets for instant interactions.",
   "type": "module",
   "scripts": {
@@ -19,16 +15,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "framer-motion": "^11.1.7",
-    "concurrently": "^8.2.2",
-    "cors": "^2.8.5",
-    "express": "^4.19.2",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.23.0",
-    "react-toastify": "^10.0.5",
-=======
     "concurrently": "^8.2.2",
     "cors": "^2.8.5",
     "express": "^4.19.2",
@@ -41,7 +27,6 @@
     "react-toastify": "^10.0.5",
     "socket.io": "^4.7.5",
     "socket.io-client": "^4.7.5",
->>>>>>> 046ca72901db62e2be2550c40410f7491ffbd3b4
     "webpack-node-externals": "^3.0.0"
   },
   "devDependencies": {
@@ -64,10 +49,6 @@
     "postcss": "^8.4.38",
     "postcss-loader": "^8.1.1",
     "prettier": "^3.2.5",
-<<<<<<< HEAD
-    "sass": "^1.76.0",
-=======
->>>>>>> 046ca72901db62e2be2550c40410f7491ffbd3b4
     "sass-loader": "^14.2.1",
     "style-loader": "^4.0.0",
     "swc-loader": "^0.2.6",
