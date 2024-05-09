@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Dates from "../dates/Dates.js";
+
 /**
  * Components pour afficher le message dans le rendu visuel
  * @param {Array} props.sendMessage - Le text à afficher.

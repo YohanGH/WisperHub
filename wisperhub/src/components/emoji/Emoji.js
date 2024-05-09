@@ -7,6 +7,7 @@ export default function Emoji({
   setMessageText,
   toggleEmoji,
   setToggleEmoji,
+  textAreaRef,
 }) {
   const emoji = [
     "🙂​",
@@ -112,6 +113,7 @@ export default function Emoji({
   };
 
   function handleEmote(emote) {
+    textAreaRef.current.textContent += emote;
     setMessageText(`${messageText}${emote}`);
   }
 

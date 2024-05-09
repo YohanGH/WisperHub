@@ -52,7 +52,6 @@ export default function InputMessage({ setSendMessage, sendMessage, user }) {
         message: messageText,
       },
     ]);
-
     socketRef.current.emit("chat message", {
       id: sendMessage.length,
       user: user,
@@ -100,6 +99,7 @@ export default function InputMessage({ setSendMessage, sendMessage, user }) {
         setMessageText={setMessageText}
         setToggleEmoji={setToggleEmoji}
         toggleEmoji={toggleEmoji}
+        textAreaRef={textAreaRef}
       />
     </>
   );
