@@ -1,0 +1,35 @@
+#messageComposer {
+  display: flex;
+  justify-content: center;
+  width: 75vw;
+  background-color: #383a40;
+  border-radius: 20px;
+  min-width: 368px;
+}
+
+.messageInput {
+  width: 100vw;
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 10px 0px 10px 10px;
+  font-size: 1.3rem;
+  resize: none;
+  overflow-y: hidden;
+  white-space: pre-wrap;
+}
+.messageInput:focus {
+  outline: none;
+}
+.sendButton {
+  background-color: transparent;
+  border: none;
+  border-bottom: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.sendPic {
+  height: 40px;
+}

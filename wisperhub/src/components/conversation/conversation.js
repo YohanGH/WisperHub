@@ -12,10 +12,13 @@ import Message from "../message/Message.js";
 export default function Conversation({ users, sendMessage }) {
   return (
     <div className="containerConversation">
+<<<<<<< HEAD
       <div className="displayInformation">
         {/* <User />
         <Date /> */}
       </div>
+=======
+>>>>>>> 046ca72901db62e2be2550c40410f7491ffbd3b4
       <div className="displayMessage">
         {<Message sendMessage={sendMessage} />}
       </div>
