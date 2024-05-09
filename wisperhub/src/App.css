@@ -1,1 +1,21 @@
+#chat {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 80vw;
+  padding-left: 8vw;
+  padding-right: 8vw;
+  color: white;
+  box-sizing: content-box;
+  height: 95vh;
+  justify-content: flex-end;
+}
 
+body {
+  background-color: #252526;
+  color: white;
+}
+
+input:focus {
+  outline: none;
+}

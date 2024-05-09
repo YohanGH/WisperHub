@@ -12,10 +12,6 @@ import Message from "../message/Message.js";
 export default function Conversation({ users, sendMessage }) {
   return (
     <div className="containerConversation">
-      <div className="displayInformation">
-        {/* <User />
-        <Date /> */}
-      </div>
       <div className="displayMessage">
         {<Message sendMessage={sendMessage} />}
       </div>

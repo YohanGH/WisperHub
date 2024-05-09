@@ -1,0 +1,51 @@
+.logging {
+  display: flex;
+  justify-content: center;
+  height: 95vh;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.loggingInput {
+  font-size: 2rem;
+  border-radius: 20px;
+  background-color: #383a40;
+  color: white;
+  width: 55vw;
+  text-align: center;
+  min-width: 324px;
+  border: none;
+  padding: 10px 3px;
+  max-width: 400px;
+}
+.joinButton {
+  background-color: #383a40;
+  color: white;
+  border-radius: 20px;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+
+  padding: 10px 30px;
+}
+
+.wisperLogo {
+  height: 400px;
+}
+
+.none {
+  display: none;
+}
+.tooShort {
+  color: red;
+  font-size: 1.2rem;
+  position: relative;
+  bottom: 120px;
+}
+.buttonContainer {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+}

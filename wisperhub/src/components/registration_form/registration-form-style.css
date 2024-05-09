@@ -1,0 +1,43 @@
+/* Styles de base pour le formulaire et les inputs */
+.registration-form-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-input,
+.button-submit {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.form-input:hover,
+.button-submit:hover {
+    border: 1px solid #ec5990;
+}
+
+.button-submit {
+    background: #ec5990;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.button-submit:hover {
+    background-color: #bf1650;
+}
+
+.form-input {
+    display: block;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    padding: 6px 10px;
+}
+
