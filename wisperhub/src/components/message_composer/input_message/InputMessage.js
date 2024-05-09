@@ -99,6 +99,7 @@ export default function InputMessage({ setSendMessage, sendMessage, user }) {
         setMessageText={setMessageText}
         setToggleEmoji={setToggleEmoji}
         toggleEmoji={toggleEmoji}
+        textAreaRef={textAreaRef}
       />
     </>
   );
