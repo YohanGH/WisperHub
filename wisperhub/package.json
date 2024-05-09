@@ -2,7 +2,7 @@
   "name": "wisperhub",
   "homepage": ".",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "This project aims to create a real-time communication application similar to Discord, utilizing React for dynamic interfaces and WebSockets for instant interactions.",
   "type": "module",
   "scripts": {
@@ -49,7 +49,6 @@
     "postcss": "^8.4.38",
     "postcss-loader": "^8.1.1",
     "prettier": "^3.2.5",
-    "sass": "^1.76.0",
     "sass-loader": "^14.2.1",
     "style-loader": "^4.0.0",
     "swc-loader": "^0.2.6",

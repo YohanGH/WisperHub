@@ -80,7 +80,6 @@ export default function InputMessage({ setSendMessage, sendMessage, user }) {
       }
     }
   };
-  console.log(messageText);
   return (
     <>
       <div
