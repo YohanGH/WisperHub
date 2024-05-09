@@ -1,0 +1,19 @@
+.containerCgu {
+  position: absolute;
+  top: 150px;
+  height: 80vh;
+  max-height: 700px;
+  z-index: 2;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  overflow-y: auto;
+  scrollbar-color: black #383a40;
+  padding-top: 2vh;
+  background-color: #252526;
+}
+
+.none {
+  display: none;
+}

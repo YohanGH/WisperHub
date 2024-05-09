@@ -2,12 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import Emoji from "../../emoji/Emoji.js";
 import io from "socket.io-client";
+import send from "../../../assets/images/send.png";
 
-export default function InputMessage({ setSendMessage, sendMessage }) {
+export default function InputMessage({ setSendMessage, sendMessage, user }) {
   const [messageText, setMessageText] = useState("");
   const [toggleEmoji, setToggleEmoji] = useState(false);
-  const user = "liladoc";
   const socketRef = useRef(null);
+  const textAreaRef = React.useRef(null);
 
   useEffect(() => {
     socketRef.current = io("http://localhost:8080");
@@ -30,12 +31,15 @@ export default function InputMessage({ setSendMessage, sendMessage }) {
   const handleInputKeyDown = (event) => {
     if (event.key === "Enter" && messageText !== "") {
       sendMessageLogic();
+      textAreaRef.current.textContent = "";
+      event.preventDefault();
     }
   };
 
   const handleSend = () => {
     if (messageText !== "") {
       sendMessageLogic();
+      textAreaRef.current.textContent = "";
     }
   };
 
@@ -58,17 +62,38 @@ export default function InputMessage({ setSendMessage, sendMessage }) {
     setToggleEmoji(false);
   };
 
+  const handleOnChange = (event) => {
+    if (textAreaRef.current) {
+      setMessageText(textAreaRef.current.textContent);
+      adjustTextAreaSize();
+    }
+  };
+
+  const adjustTextAreaSize = () => {
+    if (textAreaRef.current) {
+      const { scrollWidth, clientWidth } = textAreaRef.current;
+
+      if (scrollWidth > clientWidth) {
+        textAreaRef.current.style.height = `${textAreaRef.current.scrollHeight}px`;
+      } else {
+        textAreaRef.current.style.height = "auto";
+      }
+    }
+  };
+  console.log(messageText);
   return (
     <>
-      <input
+      <div
+        ref={textAreaRef}
         className="messageInput"
-        type="text"
-        value={messageText}
-        onChange={(e) => setMessageText(e.target.value)}
+        role="textbox"
+        contentEditable="true"
+        onInput={handleOnChange}
         onKeyDown={handleInputKeyDown}
-      />
+      ></div>
+
       <button className="sendButton" type="button" onClick={handleSend}>
-        Send
+        <img src={send} alt="send" className="sendPic" />
       </button>
 
       <Emoji
@@ -84,4 +109,5 @@ export default function InputMessage({ setSendMessage, sendMessage }) {
 InputMessage.propTypes = {
   setSendMessage: PropTypes.func.isRequired,
   sendMessage: PropTypes.array.isRequired,
+  user: PropTypes.string.isRequired,
 };

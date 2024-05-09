@@ -116,7 +116,7 @@ export default function Emoji({
   }
 
   return (
-    <div>
+    <div className="emoteButtonContainer">
       <button className="buttonEmoteMenu" type="button" onClick={handleEmoji}>
         🙂​
       </button>
