@@ -3,7 +3,7 @@ import { useState } from "react";
 import Conversation from "./conversation/conversation.js";
 import MessageComposer from "./message_composer/MessageComposer.js";
 import Logging from "./logging/Logging.js";
-import CGU from "./cgu/CGU.js"
+import CGU from "./cgu/CGU.js";
 
 export default function MainApp() {
   const [sendMessage, setSendMessage] = useState([]);
@@ -12,8 +12,8 @@ export default function MainApp() {
 
   return (
     <>
-{user.length > 3 && cguAccepted ? (
-        <div id='chat'>
+      {user.length > 3 && cguAccepted ? (
+        <div id="chat">
           <Conversation sendMessage={sendMessage} />
           <MessageComposer
             setSendMessage={setSendMessage}
